@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IDA.App.Views.LogIn">
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <Label Text="Email: " TextColor="CadetBlue"></Label>
+            <Entry Text="{Binding EntryEmail}" TextColor="CadetBlue" PlaceholderColor="Aqua"></Entry>
+            <Label Text="Password: " TextColor="CadetBlue"></Label>
+            <Entry Text="{Binding EntryPass}" IsPassword="True" TextColor="CadetBlue" PlaceholderColor="Aqua"></Entry>
+            <Button Text="Login"  TextColor="AliceBlue" BackgroundColor="DarkTurquoise" Command="{Binding Path=LogInCommand}"></Button>
+            <Button Text="Register" TextColor="AliceBlue" BackgroundColor="DarkTurquoise" Command="{Binding Path=RegisterCommand}"></Button>
+            
+      
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

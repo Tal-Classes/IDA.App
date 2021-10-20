@@ -1,5 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
+using IDA.App.ViewModels;
+using IDA.App.Views;
 using Xamarin.Forms.Xaml;
 
 namespace IDA.App
@@ -17,7 +19,7 @@ namespace IDA.App
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LogIn();
         }
 
         protected override void OnStart()

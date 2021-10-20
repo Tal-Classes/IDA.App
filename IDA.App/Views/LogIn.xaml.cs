@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace IDA.App
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace IDA.App.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LogIn : ContentPage
     {
-        public MainPage()
+        public LogIn()
         {
             InitializeComponent();
-        }
-
-        private void try_Clicked(object sender, EventArgs e)
-        {
-
         }
     }
 }

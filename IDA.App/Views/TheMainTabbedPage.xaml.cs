@@ -1,42 +1,61 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+using System.Linq;
 using System.Text;
-using IDA.App.Models;
-using IDA.App.Views;
+using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
+using Xamarin.Forms.Xaml;
+using IDA.App.ViewModels;
 
-namespace IDA.App.ViewModels
+namespace IDA.App.Views
 {
-    class TheMainTabbedPageViewModel : ViewModelBase
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TheMainTabbedPage : Xamarin.Forms.TabbedPage
     {
+        //public Register register;
+         public LogIn logIn;
 
-        private User loginUser = null;
-        public User LoginUser
+
+        public TheMainTabbedPage()
         {
-            get { return loginUser; }
-            set
-            {
-                loginUser = value;
-                TheMainTabbedPage theMainTabbedPage = (TheMainTabbedPage)Application.Current.MainPage;
-                if (loginUser == null) //Logout
-                {
-                    theMainTabbedPage.AddTab(theMainTabbedPage.logIn);
-                    //theMainTabbedPage.AddTab(theMainTabbedPage.register);
+            this.BindingContext = new TheMainTabbedPageViewModels();
+            InitializeComponent();
+            On<Windows>().SetHeaderIconsEnabled(true);
+            On<Windows>().SetHeaderIconsSize(new Size(50, 50));
 
 
-                }
-                else // Login
-                {
-                    theMainTabbedPage.RemoveTab(theMainTabbedPage.logIn);
-                    //theMainTabbedPage.RemoveTab(theMainTabbedPage.register);
+            logIn = new LogIn();
+            logIn.Title = "login";
+            //logIn.IconImageSource = "loginnn.png.png";
+            this.Children.Add(logIn);
 
+            //register = new Register();
+            //register.Title = "register";
+            //register.IconImageSource = "signup.png";
+            //this.Children.Add(register);
 
-                }
-            }
         }
 
+        public void AddTab(Xamarin.Forms.Page p)
+        {
 
+
+            if (!this.Children.Contains(p))
+                this.Children.Add(p);
+        }
+
+        public void RemoveTab(Xamarin.Forms.Page p)
+        {
+            if (this.Children.Contains(p))
+                this.Children.Remove(p);
+        }
+
+        public void CurrentTab(Xamarin.Forms.Page p)
+        {
+            this.CurrentPage = p;
+        }
     }
 }

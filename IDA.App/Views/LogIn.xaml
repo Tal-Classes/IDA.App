@@ -8,16 +8,15 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-
-     
-        <Label Text="Email: " TextColor="CadetBlue"></Label>
-            <Entry Text="{Binding EntryEmail}" TextColor="CadetBlue" PlaceholderColor="Aqua"></Entry>
-            <Label Text="Password: " TextColor="CadetBlue"></Label>
-            <Entry Text="{Binding EntryPass}" IsPassword="True" TextColor="CadetBlue" PlaceholderColor="Aqua"></Entry>
-            <Button Text="Login"  TextColor="AliceBlue" BackgroundColor="DarkTurquoise" Command="{Binding Path=LogInCommand}"></Button>
-            <Button Text="Register" TextColor="AliceBlue" BackgroundColor="DarkTurquoise" Command="{Binding Path=RegisterCommand}"></Button>
             
-      
+            <Label Text="Email: "></Label>
+            <Entry Text="{Binding EntryEmail}"></Entry>
+            <Label Text="Password: "></Label>
+            <Entry Text="{Binding EntryPass}" IsPassword="True"></Entry>
+            <Button Text="Login" BackgroundColor="DarkTurquoise" Command="{Binding Path=LogInCommand}"></Button>
+            <Button Text="Go to register" BackgroundColor="DarkTurquoise" Command="{Binding Path=RegisterCommand}"></Button>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

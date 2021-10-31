@@ -19,7 +19,7 @@ namespace IDA.App
         {
             InitializeComponent();
 
-            MainPage = new LogIn();
+            MainPage = new TheMainTabbedPage();
         }
 
         protected override void OnStart()

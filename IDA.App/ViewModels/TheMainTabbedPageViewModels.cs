@@ -12,5 +12,9 @@ namespace IDA.App.ViewModels
 {
     class TheMainTabbedPageViewModels
     {
+
+
+
+
     }
 }

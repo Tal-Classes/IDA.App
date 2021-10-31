@@ -8,15 +8,15 @@ namespace IDA.App.Models
     {
         public Location()
         {
-            Costomers = new HashSet<Costomer>();
-            Workers = new HashSet<Worker>();
+            Costomers = new List<Costomer>();
+            Workers = new List<Worker>();
         }
 
         public int Lid { get; set; }
         public string City { get; set; }
         public string Adress { get; set; }
 
-        public virtual ICollection<Costomer> Costomers { get; set; }
-        public virtual ICollection<Worker> Workers { get; set; }
+        public virtual List<Costomer> Costomers { get; set; }
+        public virtual List<Worker> Workers { get; set; }
     }
 }

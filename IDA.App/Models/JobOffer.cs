@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-#nullable disable
-
-namespace IDA.ServerBL.Models
+namespace IDA.App.Models
 {
     public partial class JobOffer
     {
         public JobOffer()
         {
-            Reviews = new HashSet<Review>();
+            Reviews = new List<Review>();
         }
 
         public int Jid { get; set; }
@@ -25,6 +24,6 @@ namespace IDA.ServerBL.Models
         public virtual Status StatusNavigation { get; set; }
         public virtual WorkerService Sw { get; set; }
         public virtual Worker WidNavigation { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; }
     }
 }

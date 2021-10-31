@@ -8,8 +8,8 @@ namespace IDA.App.Models
     {
         public Costomer()
         {
-            JobOffers = new HashSet<JobOffer>();
-            Reviews = new HashSet<Review>();
+            JobOffers = new List<JobOffer>();
+            Reviews = new List<Review>();
         }
 
         public int Cid { get; set; }
@@ -18,7 +18,7 @@ namespace IDA.App.Models
 
         public virtual Location LidNavigation { get; set; }
         public virtual User UserNameNavigation { get; set; }
-        public virtual ICollection<JobOffer> JobOffers { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public virtual List<JobOffer> JobOffers { get; set; }
+        public virtual List<Review> Reviews { get; set; }
     }
 }

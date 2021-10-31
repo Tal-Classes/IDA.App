@@ -8,7 +8,7 @@ namespace IDA.App.Models
     {
         public WorkerService()
         {
-            JobOffers = new HashSet<JobOffer>();
+            JobOffers = new List<JobOffer>();
         }
 
         public int Swid { get; set; }
@@ -18,6 +18,6 @@ namespace IDA.App.Models
 
         public virtual Service SidNavigation { get; set; }
         public virtual Worker WidNavigation { get; set; }
-        public virtual ICollection<JobOffer> JobOffers { get; set; }
+        public virtual List<JobOffer> JobOffers { get; set; }
     }
 }

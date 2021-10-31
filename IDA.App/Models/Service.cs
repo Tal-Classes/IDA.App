@@ -8,12 +8,12 @@ namespace IDA.App.Models
     {
         public Service()
         {
-            WorkerServices = new HashSet<WorkerService>();
+            WorkerServices = new List<WorkerService>();
         }
 
         public int Sid { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<WorkerService> WorkerServices { get; set; }
+        public virtual List<WorkerService> WorkerServices { get; set; }
     }
 }

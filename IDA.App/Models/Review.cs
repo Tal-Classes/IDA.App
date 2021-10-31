@@ -8,7 +8,7 @@ namespace IDA.App.Models
     {
         public Review()
         {
-            JobOffers = new HashSet<JobOffer>();
+            JobOffers = new List<JobOffer>();
         }
 
         public int Rid { get; set; }
@@ -23,6 +23,6 @@ namespace IDA.App.Models
         public virtual Costomer CidNavigation { get; set; }
         public virtual JobOffer JidNavigation { get; set; }
         public virtual Worker WidNavigation { get; set; }
-        public virtual ICollection<JobOffer> JobOffers { get; set; }
+        public virtual List<JobOffer> JobOffers { get; set; }
     }
 }

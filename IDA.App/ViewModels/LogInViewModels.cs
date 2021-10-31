@@ -11,7 +11,7 @@ using System.Collections.ObjectModel;
 
 namespace IDA.App.ViewModels
 {
-    class LogInViewModel : ViewModelBase
+    class LogInViewModels : ViewModelBase
     {
         private string entryEmail;
         public string EntryEmail
@@ -41,7 +41,7 @@ namespace IDA.App.ViewModels
             }
         }
 
-        public LogInViewModel()
+        public LogInViewModels()
         {
 
         }
@@ -66,10 +66,10 @@ namespace IDA.App.ViewModels
             EntryEmail = "";
         }
 
-        public ICommand RegisterCommand => new Command(GoToRegister);
-        private async void GoToRegister()
-        {
-            ((TheMainTabbedPage)Application.Current.MainPage).CurrentTab(((TheMainTabbedPage)Application.Current.MainPage).register);
-        }
+        //public ICommand RegisterCommand => new Command(GoToRegister);
+        //private async void GoToRegister()
+        //{
+        //    ((TheMainTabbedPage)Application.Current.MainPage).CurrentTab(((TheMainTabbedPage)Application.Current.MainPage).register);
+        //}
     }
 }

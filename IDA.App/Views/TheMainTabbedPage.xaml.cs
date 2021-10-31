@@ -1,20 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
-using System.Threading.Tasks;
-
+using IDA.App.Models;
+using IDA.App.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace IDA.App.Views
+namespace IDA.App.ViewModels
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TheMainTabbedPage : TabbedPage
+    class TheMainTabbedPageViewModel : ViewModelBase
     {
-        public TheMainTabbedPage()
+
+        private User loginUser = null;
+        public User LoginUser
         {
-            InitializeComponent();
+            get { return loginUser; }
+            set
+            {
+                loginUser = value;
+                TheMainTabbedPage theMainTabbedPage = (TheMainTabbedPage)Application.Current.MainPage;
+                if (loginUser == null) //Logout
+                {
+                    theMainTabbedPage.AddTab(theMainTabbedPage.logIn);
+                    //theMainTabbedPage.AddTab(theMainTabbedPage.register);
+
+
+                }
+                else // Login
+                {
+                    theMainTabbedPage.RemoveTab(theMainTabbedPage.logIn);
+                    //theMainTabbedPage.RemoveTab(theMainTabbedPage.register);
+
+
+                }
+            }
         }
+
+
     }
 }

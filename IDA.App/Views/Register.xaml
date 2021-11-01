@@ -8,7 +8,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Nick name: "></Label>
+            <Label Text="User Name: "></Label>
             <Entry Text="{Binding EntryUsername}"></Entry>
             <Label Text="Email: "></Label>
             <Entry Text="{Binding EntryEmail}"></Entry>

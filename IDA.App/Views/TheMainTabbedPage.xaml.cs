@@ -15,8 +15,8 @@ namespace IDA.App.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TheMainTabbedPage : Xamarin.Forms.TabbedPage
     {
-        //public Register register;
-         public LogIn logIn;
+        public Register register;
+        public LogIn logIn;
 
 
         public TheMainTabbedPage()
@@ -32,10 +32,10 @@ namespace IDA.App.Views
             //logIn.IconImageSource = "loginnn.png.png";
             this.Children.Add(logIn);
 
-            //register = new Register();
-            //register.Title = "register";
+            register = new Register();
+            register.Title = "register";
             //register.IconImageSource = "signup.png";
-            //this.Children.Add(register);
+            this.Children.Add(register);
 
         }
 

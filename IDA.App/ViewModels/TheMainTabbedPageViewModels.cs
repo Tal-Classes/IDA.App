@@ -23,14 +23,14 @@ namespace IDA.App.ViewModels
                 if (loginUser == null) //Logout
                 {
                     theMainTabbedPage.AddTab(theMainTabbedPage.logIn);
-                    //theMainTabbedPage.AddTab(theMainTabbedPage.register);
+                    theMainTabbedPage.AddTab(theMainTabbedPage.register);
 
 
                 }
                 else // Login
                 {
                     theMainTabbedPage.RemoveTab(theMainTabbedPage.logIn);
-                    //theMainTabbedPage.RemoveTab(theMainTabbedPage.register);
+                    theMainTabbedPage.RemoveTab(theMainTabbedPage.register);
 
 
                 }

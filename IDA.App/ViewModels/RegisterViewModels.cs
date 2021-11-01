@@ -12,7 +12,7 @@ namespace IDA.App.ViewModels
     class RegisterViewModel : ViewModelBase
     {
         private string entryUserName;
-        public string EntryNickName
+        public string EntryUserName
         {
             get => this.entryUserName;
             set
@@ -61,13 +61,13 @@ namespace IDA.App.ViewModels
         public ICommand RegisterCommand => new Command(Register);
         private async void Register()
         {
-            if ((EntryNickName == "") || (EntryEmail == "") || (EntryPass == ""))
+            if ((EntryUserName == "") || (EntryEmail == "") || (EntryPass == ""))
             {
                 await App.Current.MainPage.DisplayAlert("IDA", "Please fill all the fields", "Ok");
                 return;
             }
             User user = new User();
-            user.UserName = EntryNickName;
+            user.UserName = EntryUserName;
             user.Email = EntryEmail;
             user.UserPswd = EntryPass;
            IDAAPIProxy triviaWebAPIProxy = IDAAPIProxy.CreateProxy();

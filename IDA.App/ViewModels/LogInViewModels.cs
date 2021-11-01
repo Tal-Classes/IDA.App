@@ -66,10 +66,10 @@ namespace IDA.App.ViewModels
             EntryEmail = "";
         }
 
-        //public ICommand RegisterCommand => new Command(GoToRegister);
-        //private async void GoToRegister()
-        //{
-        //    ((TheMainTabbedPage)Application.Current.MainPage).CurrentTab(((TheMainTabbedPage)Application.Current.MainPage).register);
-        //}
+        public ICommand RegisterCommand => new Command(GoToRegister);
+        private async void GoToRegister()
+        {
+            ((TheMainTabbedPage)Application.Current.MainPage).CurrentTab(((TheMainTabbedPage)Application.Current.MainPage).register);
+        }
     }
 }

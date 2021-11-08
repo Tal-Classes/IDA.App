@@ -15,8 +15,10 @@ namespace IDA.App.Models
         public string UserName { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string UserPswd { get; set; }
         public string Adress { get; set; }
+        public bool IsWorker { get; set; }
 
         public virtual List<Costomer> Costomers { get; set; }
         public virtual List<Worker> Workers { get; set; }
